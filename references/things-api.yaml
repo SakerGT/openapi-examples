@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI 3.0 example
+  version: 0.0.1
+  description: An example API
+servers: 
+  - url: https://api.example.com/
+paths:
+  /:
+    get:
+      description: Get something
+      summary: get
+      tags:
+        - Get
+      responses:
+        200:
+          description: Success
+          content:
+            'application/hal+json':
+              schema:
+                $ref: '#/components/schemas/thing'
+components:
+  schemas:
+    thing:
+      $ref: https://raw.githubusercontent.com/SakerGT/openapi-examples/master/references/schemas/definitions.yaml#/things
