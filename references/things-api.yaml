@@ -22,4 +22,4 @@ paths:
 components:
   schemas:
     thing:
-      $ref: https://raw.githubusercontent.com/SakerGT/openapi-examples/master/references/schemas/definitions.yaml#/things
+      $ref: https://raw.githubusercontent.com/SakerGT/openapi-examples/master/references/schemas/definitions.yaml#/thing
