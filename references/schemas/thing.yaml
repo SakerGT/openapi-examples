@@ -1,0 +1,8 @@
+thing:
+  type: object
+  properties:
+    id:
+      readOnly: true
+      type: integer
+    name:
+      type: string
