@@ -41,7 +41,7 @@ paths:
 components:
   schemas:
     thing:
-      $ref: https://raw.githubusercontent.com/SakerGT/openapi-examples/master/references/schemas/definitions.yaml#/thing
+      $ref: schemas/definitions.yaml#/thing
     things:
       items:
         $ref: '#/components/schemas/thing'
