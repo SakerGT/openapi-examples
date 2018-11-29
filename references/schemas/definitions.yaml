@@ -6,3 +6,18 @@ thing:
       type: integer
     name:
       type: string
+car:
+  type: object
+  properties:
+    id:
+      readOnly: true
+      type: integer
+    colour:
+      type: string
+      enum: [black, white, red, blue, green]
+    engine:
+      type: string
+      enum: [inline-4, v6, v8, v10]
+    bodyStyle:
+      type: string
+      enum: [hatchback, sedan, coupe, sport-utility]
