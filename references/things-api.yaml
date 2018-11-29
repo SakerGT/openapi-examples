@@ -6,9 +6,9 @@ info:
 servers: 
   - url: https://api.example.com/
 paths:
-  /:
+  /things:
     get:
-      description: Get something
+      description: Get some things
       summary: get
       tags:
         - Get
@@ -16,10 +16,32 @@ paths:
         200:
           description: Success
           content:
-            'application/hal+json':
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/things'
+    post:
+      requestBody:
+        description: Thing
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#components/schemas/thing'
+      description: Create a new thing
+      summary: post
+      tags:
+        - Post
+      responses:
+        201:
+          description: Success
+          content:
+            'application/json':
               schema:
                 $ref: '#/components/schemas/thing'
 components:
   schemas:
     thing:
       $ref: https://raw.githubusercontent.com/SakerGT/openapi-examples/master/references/schemas/definitions.yaml#/thing
+    things:
+      items:
+        $ref: '#/components/schemas/thing'
